@@ -18,17 +18,17 @@ function reducer(state, action) {
 }
 
 function Example() {
-	const [state, dispatch] = useReducer(reducer, {
+	const [{toggle, count}, dispatch] = useReducer(reducer, {
 		toggle: false,
 		count: 0,
 	});
 	return (
 		<div>
 			<button onClick={() => dispatch({ type: 'TOGGLE' })}>
-				{state.toggle ? 'This is on!' : 'This is off!'}
+				{toggle ? 'This is on!' : 'This is off!'}
 			</button>
 			<button onClick={() => dispatch({ type: 'INCREMENT' })}>
-				{state.count}
+				{count}
 			</button>
 		</div>
 	);
