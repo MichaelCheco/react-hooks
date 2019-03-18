@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 import { AppContext } from './useContext';
 function Usage() {
-	const userInfo = useContext(AppContext);
-	console.log(userInfo, 'U');
-	return <h1>{userInfo.name}</h1>;
+	const { name } = useContext(AppContext);
+	console.log(name, 'U');
+	return <h1>{name}</h1>;
 }
 export default Usage;
